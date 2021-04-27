@@ -17,7 +17,7 @@
 
 body {
   font-family: "Lato", sans-serif;
-  color: #333;
+  color: rgb(235, 15, 205);
   line-height: 1.6;
 }
 
@@ -57,7 +57,7 @@ pre {
   height: 0;
 }
 
-/*Navbar*/
+/* Navbar */
 
 .navbar {
   background-color: var(--primary-color);
@@ -83,7 +83,7 @@ pre {
   justify-content: space-between;
 }
 
-/*Showcase*/
+/* Showcase */
 .showcase {
   height: 400px;
   background-color: var(--primary-color);
@@ -101,7 +101,7 @@ pre {
 
 .showcase .grid {
   overflow: visible;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 55% auto;
   gap: 30px;
 }
 
@@ -116,6 +116,7 @@ pre {
   width: 400px;
   padding: 40px;
   z-index: 100;
+  justify-self: flex-end;
   animation: slideInFromRight 1s ease-in;
 }
 
@@ -192,6 +193,7 @@ pre {
 .languages .flex {
   flex-wrap: wrap;
 }
+
 .languages .card {
   text-align: centre;
   margin: 18px 10px 40px;
@@ -249,7 +251,11 @@ pre {
   font-size: 17px;
   padding-bottom: 5px;
   margin-bottom: 5px;
-  border-bottom: 1px;
+  border-bottom: 1px #ccc solid;
+}
+
+.docs-main a:hover {
+  font-weight: bold;
 }
 
 /* Footer */
@@ -257,7 +263,7 @@ pre {
   margin: 0 10px;
 }
 
-/* Animation */
+/* Animations */
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -298,7 +304,7 @@ pre {
   }
 }
 
-/* Tablets and under*/
+/* Tablets and under */
 @media (max-width: 768px) {
   .grid,
   .showcase .grid,
@@ -363,5 +369,9 @@ pre {
   .navbar ul {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .showcase-form {
+    width: 300px;
   }
 }
